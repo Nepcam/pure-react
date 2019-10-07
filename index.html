@@ -13,10 +13,10 @@
 
   <script>
 
-    const Person = () => {
+    const Person = (props) => {
       return React.createElement("div", {}, [
-        React.createElement("h1", {}, "Cameron"),
-        React.createElement("p", {}, "Developer"),
+        React.createElement("h1", {}, props.name),
+        React.createElement("p", {}, props.occupation),
       ])
     }
 
@@ -24,9 +24,8 @@
       return React.createElement("div", {}, 
       [
         React.createElement("h1", {}, 'REACT IS RENDERED!!!'),
-        React.createElement(Person),
-        React.createElement(Person),
-        React.createElement(Person),
+        React.createElement(Person, {name: 'Cameron', occupation: 'Developer'}),
+        React.createElement(Person, {name: 'Pae', occupation: 'Teacher'})
       ]
       );
     };
