@@ -13,9 +13,21 @@
 
   <script>
 
+    const Person = () => {
+      return React.createElement("div", {}, [
+        React.createElement("h1", {}, "Cameron"),
+        React.createElement("p", {}, "Developer"),
+      ])
+    }
+
     const App = () => {
       return React.createElement("div", {}, 
-      React.createElement("h1", {}, 'REACT IS RENDERED!!!')
+      [
+        React.createElement("h1", {}, 'REACT IS RENDERED!!!'),
+        React.createElement(Person),
+        React.createElement(Person),
+        React.createElement(Person),
+      ]
       );
     };
 
